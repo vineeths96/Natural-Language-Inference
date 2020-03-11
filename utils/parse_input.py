@@ -93,7 +93,10 @@ def preprocess(text, remove_htmltags=True, remove_extra_whitespace=True,
 
 
 def parse_input(fname, mode):
-    file = open(fname)
+    try:
+        file = open(fname)
+    except:
+        print("Files not found. Check the input folder (Ensure steps in input_info.md is followed)")
 
     sentence1 = []
     sentence2 = []
