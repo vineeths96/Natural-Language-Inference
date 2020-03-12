@@ -10,5 +10,5 @@ data = read_data()
 train_data = data[:3]
 test_data = data[3:]
 
-#logistic_regression_train(train_data)
+logistic_regression_train(train_data)
 logistic_regression_test(test_data)

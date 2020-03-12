@@ -3,8 +3,8 @@ import pickle
 from TFIDF.TFIDF_features import TFIDF_features
 
 
-def logistic_regression_test(data):
-    test_feature, test_label = TFIDF_features(data, "test")
+def logistic_regression_test(test_data):
+    test_feature, test_label = TFIDF_features(test_data, "test")
 
     with open('./model/LR.pickle', "rb") as file:
         LR_model = pickle.load(file)
@@ -22,5 +22,4 @@ def logistic_regression_test(data):
 
     score = LR_model.score(test_feature, test_label) * 100
 
-    with open('./results/TFIDF_LR.txt', "w") as file:
-        file.write("The classification accuracy for Logistic regression with TF-IDF features is {}%.".format(score))
+    print("The classification accuracy for Logistic regression with TF-IDF features is {}%.".format(score))

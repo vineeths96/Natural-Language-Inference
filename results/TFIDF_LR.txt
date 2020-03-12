@@ -1,1 +1,3 @@
-The classification accuracy for Logistic regression with TF-IDF features is 47.910000000000004%.
+The classification accuracy for Logistic regression with TF-IDF features (dot product) is 47.95%.
+The classification accuracy for Logistic regression with TF-IDF features (Euclidean distance) is 45.78%.
+The classification accuracy for Logistic regression with TF-IDF features (side by side) is 54.64%.
