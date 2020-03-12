@@ -6,6 +6,8 @@ from word2number import w2n
 from bs4 import BeautifulSoup
 import contractions
 
+nlp = spacy.load('en_core_web_sm')
+
 
 def remove_html(text):
     soup = BeautifulSoup(text, "html.parser")
@@ -59,7 +61,6 @@ def preprocess(text, remove_htmltags=True, remove_extra_whitespace=True,
     if convert_lowercase:
         text = lowercase(text)
 
-    nlp = spacy.load('en_core_web_sm')
     doc = nlp(text)
 
     cleaned_text = []
@@ -79,11 +80,13 @@ def preprocess(text, remove_htmltags=True, remove_extra_whitespace=True,
 
         if remove_num and (token.pos_ == 'NUM' or token.text.isnumeric()) and flag:
             flag = False
+        try:
+            if convert_num and token.pos_ == 'NUM' and flag:
+                token_text = w2n.word_to_num(token.text)
+        except:
+            pass
 
-        if convert_num and token.pos_ == 'NUM' and flag:
-            token_text = w2n.word_to_num(token.text)
-
-        elif lemmatization and token.lemma_ != "-PRON-" and flag:
+        if lemmatization and token.lemma_ != "-PRON-" and flag:
             token_text = token.lemma_
 
         if token_text != "" and flag:
@@ -101,6 +104,7 @@ def parse_input(fname, mode):
     sentence1 = []
     sentence2 = []
     gold_label = []
+    count = 1
 
     for line in file:
         data = json.loads(line)
@@ -116,8 +120,19 @@ def parse_input(fname, mode):
         sentence2.append(preprocessed_sentence2)
         gold_label.append(line_gold_label)
 
+        print(count)
+        count += 1
+
     with open('./input/' + mode + '_list_sentence1.txt', "wb") as file:
         pickle.dump(sentence1, file)
 
     with open('./input/' + mode + '_list_sentence2.txt', "wb") as file:
         pickle.dump(sentence2, file)
+
+    with open('./input/' + mode + '_list_gold_label.txt', "wb") as file:
+        pickle.dump(gold_label, file)
+
+
+def generate_meta_input():
+    parse_input('./input/snli_1.0_train.jsonl', "train")
+    parse_input('./input/snli_1.0_test.jsonl', "test")
