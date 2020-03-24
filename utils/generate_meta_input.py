@@ -1,3 +1,4 @@
+import os
 import json
 import spacy
 import pickle
@@ -123,16 +124,21 @@ def parse_input(fname, mode):
         print(count)
         count += 1
 
-    with open('./input/' + mode + '_list_sentence1.txt', "wb") as file:
+    with open('./input/data_pickles/' + mode + '_list_sentence1.txt', "wb") as file:
         pickle.dump(sentence1, file)
 
-    with open('./input/' + mode + '_list_sentence2.txt', "wb") as file:
+    with open('./input/data_pickles/' + mode + '_list_sentence2.txt', "wb") as file:
         pickle.dump(sentence2, file)
 
-    with open('./input/' + mode + '_list_gold_label.txt', "wb") as file:
+    with open('./input/data_pickles/' + mode + '_list_gold_label.txt', "wb") as file:
         pickle.dump(gold_label, file)
 
 
 def generate_meta_input():
+    try:
+        os.makedirs('./input/data_pickles')
+    except:
+        pass
+
     parse_input('./input/snli_1.0_train.jsonl', "train")
     parse_input('./input/snli_1.0_test.jsonl', "test")

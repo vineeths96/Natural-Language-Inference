@@ -11,7 +11,7 @@ def TFIDF_features(data, mode):
 
     train_corpus_sentence1 = [' '.join(item) for item in list_sentence1]
     train_corpus_sentence2 = [' '.join(item) for item in list_sentence2]
-    num_samples = len(train_corpus_sentence1)
+    num_samples = len(list_gold_label)
 
     train_corpus = [train_corpus_sentence1[ind] + " " + train_corpus_sentence2[ind] for ind in range(num_samples)]
 
@@ -38,6 +38,10 @@ def TFIDF_features(data, mode):
     """
 
     """
+    tfidf_feature_array = scipy.sparse.csr_matrix.sum(scipy.sparse.csc_matrix.multiply(tfidf_sentecnce1, tfidf_sentecnce2), axis=1)
+    """
+
+    """
     tfidf_distance = tfidf_sentecnce1 - tfidf_sentecnce2
     tfidf_feature = [np.linalg.norm(tfidf_distance[ind].toarray()) for ind in range(tfidf_distance.shape[0])]
     tfidf_feature_array = np.asarray(tfidf_feature).reshape(-1, 1)
@@ -45,7 +49,19 @@ def TFIDF_features(data, mode):
 
     tfidf_feature_array = TFIDF_vect.transform(train_corpus)
 
-    tfidf_label = [0 if item == "contradiction" else 1 if item == "neutral" else 2 if item == "entailment" \
-                    else -1 for item in list_gold_label]
+    tfidf_labels = [None] * num_samples
+    for ind, item in enumerate(list_gold_label):
+        if item == "contradiction":
+            tfidf_labels[ind] = 0
+        elif item == "neutral":
+            tfidf_labels[ind] = 1
+        elif item == "entailment":
+            tfidf_labels[ind] = 2
+        else:
+            tfidf_labels[ind] = -1
+
+
+    #tfidf_label = [0 if item == "contradiction" else 1 if item == "neutral" else 2 if item == "entailment" \
+    #                else -1 for item in list_gold_label]
 
     return tfidf_feature_array, tfidf_label
