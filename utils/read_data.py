@@ -1,6 +1,7 @@
 import pickle
 
 
+# Reads pickled lists containing cleaned data (stored as lists of tokens)
 def read_data():
     with open('./input/data_pickles/train_list_sentence1.txt', "rb") as file:
         train_list_sentence1 = pickle.load(file)

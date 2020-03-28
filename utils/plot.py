@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 
+
 # Plot training performance
 def plot(history, network):
     # Plot training & validation accuracy values
@@ -10,7 +11,7 @@ def plot(history, network):
     plt.xlabel('Epoch')
     plt.legend(['Training', 'Validation'], loc='upper right')
     plt.savefig('./results/' + network + '/accuracy_vs_epoch.png')
-    #plt.show()
+    plt.show()
 
     # Plot training & validation loss values
     plt.plot(history.history['loss'])
@@ -20,4 +21,4 @@ def plot(history, network):
     plt.xlabel('Epoch')
     plt.legend(['Training', 'Validation'], loc='upper right')
     plt.savefig('./results/' + network + '/loss_vs_epoch.png')
-    #plt.show()
+    plt.show()

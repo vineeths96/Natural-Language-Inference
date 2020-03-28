@@ -4,7 +4,7 @@ import itertools
 
 
 # Plots the confusion matrix using scikit-learns confusion matrix
-# This function snippet was obtained from stackoverflow and wsa modified
+# This function snippet was obtained from stackoverflow and was modified
 def plot_confusion_matrix(cm, network, classes, normalize=False, title='Confusion matrix', cmap=plt.cm.Blues):
     plt.figure()
     plt.imshow(cm, interpolation='nearest', cmap=cmap)
@@ -27,4 +27,4 @@ def plot_confusion_matrix(cm, network, classes, normalize=False, title='Confusio
     plt.ylabel('True label')
     plt.xlabel('Predicted label')
     plt.savefig('./results/' + network + '/confusion_matrix.png')
-    # plt.show()
+    plt.show()
