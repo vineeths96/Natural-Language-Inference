@@ -83,7 +83,12 @@ def TFIDF_features(data, mode):
     tfidf_feature_array = np.asarray(tfidf_feature).reshape(-1, 1)
     """
 
-    # Option 4: TFIDF vectors for sentence1 and sentence2 and concatenated
+    """
+    # Option 4: TFIDF vectors for concatenated string of sentence1 and sentence2 
     tfidf_feature_array = TFIDF_vect.transform(corpus)
+    """
+
+    # Option 5: TFIDF vectors for sentence1 and sentence2 and concatenated
+    tfidf_feature_array = scipy.sparse.hstack((tfidf_sentecnce1, tfidf_sentecnce2))
 
     return tfidf_feature_array, tfidf_labels

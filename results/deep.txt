@@ -1,0 +1,3 @@
+The classification accuracy for deep model with BiGRU architecture is 78.58%.
+The classification accuracy for deep model with BiLSTM architecture is 76.38%.
+The classification accuracy for deep model with SUmEmbeddings architecture is 80.19%.
