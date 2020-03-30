@@ -28,6 +28,7 @@ def SE_model_train(data):
     SumEmbeddings = Lambda(lambda data: K.sum(data, axis=1), output_shape=(SENT_HIDDEN_SIZE,))
 
     # Add a time distributed translation layer for better performance
+    # Time distributed layer applies the same Dense layer to each temporal slice of input
     translation = TimeDistributed(Dense(SENT_HIDDEN_SIZE, activation=ACTIVATION))
 
     # Define the input layers and its shapes for premise and hypothesis
@@ -92,11 +93,12 @@ def SE_model_train(data):
                                                 min_lr=0.00001)
 
     # Early stopping callback to stop training if we are not making any positive progress
-    _, tmpfn = tempfile.mkstemp()
     early_stopping = EarlyStopping(monitor='val_loss',
                                    patience=PATIENCE)
 
     # ModelCheckpoint callback to save the model with best performance
+    # A temporary file is created to which the intermediate model weights are stored
+    _, tmpfn = tempfile.mkstemp()
     model_checkpoint = ModelCheckpoint(tmpfn, save_best_only=True, save_weights_only=True)
 
     callbacks = [early_stopping, model_checkpoint, learning_rate_reduction]

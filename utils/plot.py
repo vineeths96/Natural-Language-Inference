@@ -10,6 +10,7 @@ def plot(history, network):
     plt.ylabel('Accuracy')
     plt.xlabel('Epoch')
     plt.legend(['Training', 'Validation'], loc='upper right')
+    plt.tight_layout()
     plt.savefig('./results/' + network + '/accuracy_vs_epoch.png')
     plt.show()
 
@@ -20,5 +21,6 @@ def plot(history, network):
     plt.ylabel('Loss')
     plt.xlabel('Epoch')
     plt.legend(['Training', 'Validation'], loc='upper right')
+    plt.tight_layout()
     plt.savefig('./results/' + network + '/loss_vs_epoch.png')
     plt.show()

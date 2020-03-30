@@ -26,5 +26,6 @@ def plot_confusion_matrix(cm, network, classes, normalize=False, title='Confusio
     plt.tight_layout()
     plt.ylabel('True label')
     plt.xlabel('Predicted label')
+    plt.tight_layout()
     plt.savefig('./results/' + network + '/confusion_matrix.png')
     plt.show()
