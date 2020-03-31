@@ -4,9 +4,9 @@ import numpy as np
 # Process the data and return the data in required format
 def preprocess(data):
     # Get the sentences and labels from composite data
-    list_sentence1 = data[0][0][:1000]
-    list_sentence2 = data[1][0][:1000]
-    list_gold_label = data[2][0][:1000]
+    list_sentence1 = data[0][0]
+    list_sentence2 = data[1][0]
+    list_gold_label = data[2][0]
 
     # Merge each sublist (tokens list of each sentence) to a string
     corpus_sentence1 = [' '.join(item) for item in list_sentence1]

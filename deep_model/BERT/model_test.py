@@ -68,6 +68,6 @@ def BERT_model_test(data):
     plt.figure()
     sns.heatmap(pd.DataFrame(classification_rep).iloc[:-1, :].T, annot=True)
     plt.savefig('./results/BERT/classification_report.png')
-    plt.show()
+    # plt.show()
     plot_model(model, to_file='./results/BERT/model_plot.png', show_shapes=True, show_layer_names=True)
     """
