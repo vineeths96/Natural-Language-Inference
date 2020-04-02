@@ -31,7 +31,7 @@
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Instructions to run](#instructions-to-run)
-* [Models overview](#Models overview)
+* [Models overview](#models-overview)
   * [Logistic regression](#logistic-regression)
   * [Deep learning models](#deep-learning-models)
 * [Results](#results)
