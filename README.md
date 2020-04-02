@@ -189,5 +189,4 @@ Project Link: [https://github.com/vineeths96/Natural-Language-Inference](https:/
 [license-url]: https://github.com/vineeths96/README-Template/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/vineeths
----
 
