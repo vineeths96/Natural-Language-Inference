@@ -178,16 +178,16 @@ Project Link: [https://github.com/vineeths96/Natural-Language-Inference](https:/
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/vineeths96/README-Template.svg?style=flat-square
-[contributors-url]: https://github.com/vineeths96/README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/vineeths96/README-Template.svg?style=flat-square
-[forks-url]: https://github.com/vineeths96/README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/vineeths96/README-Template.svg?style=flat-square
-[stars-url]: https://github.com/vineeths96/README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/vineeths96/README-Template.svg?style=flat-square
-[issues-url]: https://github.com/vineeths96/README-Template/issues
+[contributors-shield]: https://img.shields.io/github/contributors/vineeths96/Natural-Language-Inference.svg?style=flat-square
+[contributors-url]: https://github.com/vineeths96/Natural-Language-Inference/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/vineeths96/Natural-Language-Inference.svg?style=flat-square
+[forks-url]: https://github.com/vineeths96/Natural-Language-Inference/network/members
+[stars-shield]: https://img.shields.io/github/stars/vineeths96/Natural-Language-Inference.svg?style=flat-square
+[stars-url]: https://github.com/vineeths96/Natural-Language-Inference/stargazers
+[issues-shield]: https://img.shields.io/github/issues/vineeths96/Natural-Language-Inference.svg?style=flat-square
+[issues-url]: https://github.com/vineeths96/Natural-Language-Inference/issues
 [license-shield]: https://img.shields.io/badge/License-MIT-yellow.svg
-[license-url]: https://github.com/vineeths96/README-Template/blob/master/LICENSE
+[license-url]: https://github.com/vineeths96/Natural-Language-Inference/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/vineeths
 
