@@ -7,7 +7,7 @@
   <a href="https://github.com/vineeths96/Natural-Language-Inference">
     <img src="results/logo.jpg" alt="Logo" width="80" height="80">
   </a>
-  <h3 align="center">README-Template</h3>
+  <h3 align="center">Natural Language Inference (NLI)</h3>
   <p align="center">
     Natural Language Inference (NLI) using SNLI dataset.
     <br />
@@ -17,6 +17,7 @@
     <a href=https://github.com/vineeths96/Natural-Language-Inference/blob/master/results/Project3.pdf>View Problem Statement</a>
     <a href=https://github.com/vineeths96/Natural-Language-Inference/blob/master/results/Deep_Learning_Report_3.pdf>View Report</a>
   </p>
+
 
 
 </p>
