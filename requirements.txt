@@ -191,7 +191,7 @@ syntok==1.2.2
 tensorboard==2.2.1
 tensorboard-plugin-wit==1.6.0.post3
 tensorboardX==2.0
-tensorflow==2.2.0
+tensorflow==2.2.1
 tensorflow-datasets==2.1.0
 tensorflow-estimator==2.2.0
 tensorflow-gpu==2.1.0
