@@ -126,7 +126,7 @@ parsimonious==0.8.1
 parso==0.6.2
 pexpect==4.8.0
 pickleshare==0.7.5
-Pillow==7.0.0
+Pillow==8.1.1
 plac==0.9.6
 pluggy==0.13.1
 preshed==3.0.2
