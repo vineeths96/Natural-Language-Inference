@@ -66,7 +66,7 @@ iterative-stratification==0.1.6
 itsdangerous==1.1.0
 jedi==0.16.0
 jieba==0.42.1
-Jinja2==2.11.1
+Jinja2==2.11.3
 jmespath==0.9.5
 joblib==0.14.1
 jsonnet==0.15.0
