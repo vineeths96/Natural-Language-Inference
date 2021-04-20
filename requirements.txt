@@ -136,7 +136,7 @@ promise==2.3
 prompt-toolkit==3.0.3
 protobuf==3.11.2
 ptyprocess==0.6.0
-py==1.8.1
+py==1.10.0
 py-params==0.8.3
 pyahocorasick==1.4.0
 pyarrow==0.16.0
