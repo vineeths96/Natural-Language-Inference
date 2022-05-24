@@ -194,7 +194,7 @@ tensorboardX==2.0
 tensorflow==2.2.0
 tensorflow-datasets==2.1.0
 tensorflow-estimator==2.2.0
-tensorflow-gpu==2.1.0
+tensorflow-gpu==2.6.4
 tensorflow-hub==0.7.0
 tensorflow-metadata==0.21.1
 termcolor==1.1.0
